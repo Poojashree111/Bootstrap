@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+
+        .card:hover{transform: scale(1.1);background-color: rgba(192, 192, 192, 0.61);}
+ 
+        .nav-item :hover{transform: scale(1.1);}
+ 
+        .button {
+ 
+    display: inline-block;
+ 
+    border-radius: 4px;
+ 
+    background-color:#c0c0c0;
+ 
+    border: none;
+ 
+    color: #FFFFFF;
+ 
+    text-align: center;
+ 
+    font-size: 28px;
+ 
+    padding: 20px;
+ 
+    width: 200px;
+ 
+    transition: all 0.5s;
+ 
+    cursor: pointer;
+ 
+    margin: 5px;
+ 
+  }
+ 
+ 
+ 
+  .button span {
+ 
+    cursor: pointer;
+ 
+    display: inline-block;
+ 
+    position: relative;
+ 
+    transition: 0.5s;
+ 
+  }
+ 
+ 
+ 
+  .button span:after {
+ 
+    content: '\00bb';
+ 
+    position: absolute;
+ 
+    opacity: 0;
+ 
+    top: 0;
+ 
+    right: -20px;
+ 
+    transition: 0.5s;
+ 
+  }
+ 
+ 
+ 
+  .button:hover span {
+ 
+    padding-right: 25px;
+ 
+  }
+ 
+ 
+ 
+  .button:hover span:after {
+ 
+    opacity: 1;
+ 
+    right: 0;
+ 
+  }
+ 
+      </style>
+</head>
+<body>
+    <style>
+        body{
+          background-image: url(";data:image/jpeg;base64,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");
+
+        }
+      </style>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Contact</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Mobile : 900674237</h6>
+      
+    </div>
+    <p class="text-muted mb-4">instagram <span class="mx-2">|</span> <a
+        href="https://www.instagram.com/accounts/login/">@inst.com</a></p>
+        <p class="text-muted mb-4">twitter<span class="mx-2">|</span> <a
+            href="https://www.bing.com/search?q=twitter+login+page&qs=n&form=QBRE&msbsrank=7_8__0&sp=-1&pq=twitter+login+page&sc=15-18&sk=&cvid=33D650FB2A7A4C44BF12CC1B4C7C8C5C&ghsh=0&ghacc=0&ghpl=">
+            @twitter.com</a></p>
+    
+            <p class="text-muted mb-4">Facebook <span class="mx-2">|</span> <a
+                href="https://www.bing.com/search?q=facebook&cvid=1b5627ffc7ea46a08d3c2033d5efdf70&aqs=edge.1.69i59j46j69i57j0l6j1001i1i11002j69i11004.3508j0j1&pglt=43&FORM=ANNAB1&PC=U531">@facebook</a></p>
+
+</div>
+<a href="d1.html" class="btn btn-primary">Back</a>
+
+      
+    </div>
+  </div>
